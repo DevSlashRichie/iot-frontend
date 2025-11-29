@@ -43,8 +43,8 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          VITE_API_URL: http://158.23.162.90
-          VITE_WS_URL: ws://158.23.162.90
+          VITE_API_URL: http://iot.binarysails.com
+          VITE_WS_URL: ws://iot.binarysails.com
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
