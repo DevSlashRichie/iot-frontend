@@ -1,0 +1,10 @@
+:80 {
+    root * /usr/share/caddy
+    file_server
+
+    # Proxy API and WebSocket requests to the backend service
+    # "backend" matches the service name in docker-compose.yml
+    reverse_proxy /sensor* backend:8080
+
+    try_files {path} /index.html
+}

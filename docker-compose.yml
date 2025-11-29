@@ -1,0 +1,19 @@
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+
+  backend:
+    # Replace with your actual backend image or build context
+    # image: my-backend-image
+    # build: ../backend
+    container_name: backend
+    expose:
+      - "8080" # Internal port the backend listens on
+    environment:
+      - PORT=8080
