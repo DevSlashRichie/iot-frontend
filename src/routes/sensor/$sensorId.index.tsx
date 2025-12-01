@@ -51,7 +51,7 @@ function SensorDetail() {
   // Determine current value (WebSocket or fallback to 0/loading)
   const currentValue = lastEntry?.value ?? 0;
   // Simple logic to determine if "high" (example threshold)
-  const isHigh = currentValue > 1000; // Example threshold
+  const isHigh = currentValue > 350; // Example threshold
 
   return (
     <div className="space-y-6">
